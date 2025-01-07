@@ -7,7 +7,7 @@ from PIL import Image;
 load_dotenv()
 
 
-genai.configure(api_key = "AIzaSyDkDMrSj-bhZ1w3_9ydBttBYDL6ORZKF7o")
+genai.configure(api_key = "AIzaSyApJH91JCMZ6aJHj1r6O7rv-SapZKKiPwc")
 
 def get_gemini_response(input_prompt,image):
     model = genai.GenerativeModel('gemini-pro-vision')   # since we deal with image so we use gemini pro vision
