@@ -20,7 +20,7 @@ def input_image_setup(uploaded_file):
      #check if a file has been uploaded
      if uploaded_file is not None:
           #READ THE FILE INTO BYTES
-          bytes_data = uploaded_file.getvalues()
+          bytes_data = uploaded_file.read()
 
           image_parts= [
                
