@@ -3,6 +3,8 @@ import google.generativeai as genai;
 import os;
 from dotenv import load_dotenv;
 from PIL import Image;
+import base64
+from io import BytesIO
 
 load_dotenv()
 
@@ -22,18 +24,9 @@ def input_image_setup(uploaded_file):
           #READ THE FILE INTO BYTES
           bytes_data = uploaded_file.read()
 
-          image_parts= [
-               
-               {
-                    "mime_type":uploaded_file.type,   #get the mime type of the uploaded file
-                    "data":bytes_data
-               }
-               
+          
 
-
-          ]
-
-          return image_parts
+          return bytes_data
      
      else:
           raise FileNotFoundError("no file uploaded")
